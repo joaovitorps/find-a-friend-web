@@ -7,9 +7,9 @@
   ],
   "type": "module",
   "scripts": {
-    "dev": "npm run dev --workspaces",
-    "build": "npm run build --workspaces",
-    "check-types": "npm run check-types --workspaces",
+    "dev": "npm run dev --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "check-types": "npm run check-types --workspaces --if-present",
     "dev:web": "npm run dev --workspace web"
   },
   "dependencies": {
