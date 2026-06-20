@@ -1,0 +1,25 @@
+{
+  "name": "find-a-friend-web",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "npm run dev --workspaces",
+    "build": "npm run build --workspaces",
+    "check-types": "npm run check-types --workspaces",
+    "dev:web": "npm run dev --workspace web"
+  },
+  "dependencies": {
+    "@find-a-friend-web/env": "*",
+    "dotenv": "^17.2.2",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@find-a-friend-web/config": "*",
+    "typescript": "^6"
+  },
+  "packageManager": "npm@11.9.0"
+}
