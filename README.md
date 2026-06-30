@@ -1,69 +1,68 @@
 # find-a-friend-web
 
-This project was created with [Better-T-Stack](https://github.com/AmanVarshney01/create-better-t-stack), a modern TypeScript stack that combines React, TanStack Router, and more.
+Single React web app for Find a Friend.
 
 ## Features
 
-- **TypeScript** - For type safety and improved developer experience
-- **TanStack Router** - File-based routing with full type safety
-- **TailwindCSS** - Utility-first CSS for rapid UI development
-- **Shared UI package** - shadcn/ui primitives live in `packages/ui`
+- **React + TypeScript** for the frontend
+- **TanStack Router** for file-based routing
+- **Tailwind CSS v4** for styling
+- **Base UI primitives** wrapped in local UI components
 
 ## Getting Started
 
-First, install the dependencies:
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-Then, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser to see the web application.
+Open [http://localhost:3001](http://localhost:3001) in your browser.
 
 ## UI Customization
 
-React web apps in this stack share shadcn/ui primitives through `packages/ui`.
+- App code lives in `src`
+- Reusable UI primitives live in `src/components/ui`
+- Design tokens and global styles live in `src/styles/globals.css`
+- Shared helpers live in `src/lib`
 
-- Change design tokens and global styles in `packages/ui/src/styles/globals.css`
-- Update shared primitives in `packages/ui/src/components/*`
-- Adjust shadcn aliases or style config in `packages/ui/components.json` and `apps/web/components.json`
-
-### Add more shared components
-
-Run this from the project root to add more primitives to the shared UI package:
+To add more shadcn/base UI primitives, run from the project root:
 
 ```bash
-npx shadcn@latest add accordion dialog popover sheet table -c packages/ui
+npx shadcn@latest add accordion dialog popover sheet table
 ```
 
-Import shared components like this:
+Import local UI components like this:
 
 ```tsx
-import { Button } from "@find-a-friend-web/ui/components/button";
+import { Button } from "@/components/ui/button";
 ```
-
-### Add app-specific blocks
-
-If you want to add app-specific blocks instead of shared primitives, run the shadcn CLI from `apps/web`.
 
 ## Project Structure
 
-```
+```text
 find-a-friend-web/
-├── apps/
-│   ├── web/         # Frontend application (React + TanStack Router)
-├── packages/
-│   ├── ui/          # Shared shadcn/ui components and styles
+├── src/
+│   ├── components/
+│   │   └── ui/
+│   ├── lib/
+│   ├── routes/
+│   └── styles/
+├── index.html
+├── vite.config.ts
+├── tsconfig.json
+└── package.json
 ```
 
 ## Available Scripts
 
-- `npm run dev`: Start all applications in development mode
-- `npm run build`: Build all applications
-- `npm run dev:web`: Start only the web application
-- `npm run check-types`: Check TypeScript types across all apps
+- `npm run dev`: start the development server
+- `npm run build`: build the app
+- `npm run serve`: preview the production build
+- `npm run check-types`: build and run TypeScript checks
