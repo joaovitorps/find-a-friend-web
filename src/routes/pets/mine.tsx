@@ -126,7 +126,7 @@ function MyPetsPage() {
         </section>
 
         {!orgId ? (
-          <div className="rounded-[8px] border border-[#f15156]/20 bg-white p-6">
+          <div className="rounded-xl border border-[#f15156]/20 bg-white p-6">
             <h2 className="font-black text-2xl text-[#0d3b66]">Faça login para ver seus pets</h2>
             <p className="mt-2 font-semibold text-[#0d3b66]/65 text-sm leading-6">
               Essa área usa a organização salva no login.

@@ -48,7 +48,7 @@ export function PetSearchForm({ values, loading = false, onSearch, onClear }: Pe
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-[8px] border border-[#0d3b66]/10 bg-white p-4 shadow-sm sm:p-5"
+      className="rounded-xl border border-[#0d3b66]/10 bg-white p-4 shadow-sm sm:p-5"
     >
       <div className="grid gap-3 lg:grid-cols-[minmax(180px,1.2fr)_repeat(4,minmax(130px,1fr))_auto] lg:items-end">
         <label className="grid gap-2">
@@ -57,7 +57,7 @@ export function PetSearchForm({ values, loading = false, onSearch, onClear }: Pe
             value={draft.city}
             onChange={(event) => setDraft((current) => ({ ...current, city: event.target.value }))}
             placeholder="Ex.: Recife"
-            className="h-12 rounded-[8px] border-[#0d3b66]/15 bg-[#fff7ed] px-4 font-bold text-[#0d3b66] text-sm placeholder:text-[#0d3b66]/35"
+            className="h-12 rounded-xl border-[#0d3b66]/15 bg-[#fff7ed] px-4 font-bold text-[#0d3b66] text-sm placeholder:text-[#0d3b66]/35"
           />
         </label>
 
@@ -165,7 +165,7 @@ function FilterSelect({
       <select
         value={value}
         onChange={(event) => onChange(event.target.value || undefined)}
-        className="h-12 w-full rounded-[8px] border border-[#0d3b66]/15 bg-[#fff7ed] px-3 font-bold text-[#0d3b66] text-sm outline-none transition focus-visible:ring-2 focus-visible:ring-[#0d3b66]/25"
+        className="h-12 w-full rounded-xl border border-[#0d3b66]/15 bg-[#fff7ed] px-3 font-bold text-[#0d3b66] text-sm outline-none transition focus-visible:ring-2 focus-visible:ring-[#0d3b66]/25"
       >
         <option value="">Todos</option>
         {options.map((option) => (

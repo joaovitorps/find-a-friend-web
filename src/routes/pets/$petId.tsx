@@ -78,7 +78,7 @@ function PetDetailsPage() {
         {loading ? <PetDetailsSkeleton /> : null}
 
         {!loading && error ? (
-          <div className="mt-8 rounded-[8px] border border-[#f15156]/20 bg-white px-6 py-12 text-center">
+          <div className="mt-8 rounded-xl border border-[#f15156]/20 bg-white px-6 py-12 text-center">
             <h1 className="font-black text-3xl text-[#0d3b66]">Não encontramos esse pet</h1>
             <p className="mx-auto mt-3 max-w-md font-semibold text-[#0d3b66]/65 text-sm leading-6">
               {error}
@@ -88,7 +88,7 @@ function PetDetailsPage() {
 
         {!loading && pet ? (
           <section className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px]">
-            <div className="overflow-hidden rounded-[8px] bg-white shadow-sm">
+            <div className="overflow-hidden rounded-xl bg-white shadow-sm">
               <PetPictureCarousel
                 pet={pet}
                 pictureIndex={pictureIndex}
@@ -118,7 +118,7 @@ function PetDetailsPage() {
             </div>
 
             <aside className="flex flex-col gap-4">
-              <div className="rounded-[8px] bg-[#0d3b66] p-6 text-white">
+              <div className="rounded-xl bg-[#0d3b66] p-6 text-white">
                 <HeartHandshake className="size-8 text-[#f4d35e]" />
                 <h2 className="mt-4 font-black text-2xl">Requisitos de adoção</h2>
                 {pet.adoptionRequirements.length > 0 ? (
@@ -134,7 +134,7 @@ function PetDetailsPage() {
                 )}
               </div>
 
-              <div className="grid gap-3 rounded-[8px] bg-white p-5 shadow-sm">
+              <div className="grid gap-3 rounded-xl bg-white p-5 shadow-sm">
                 <DetailMetric
                   icon={<Maximize2 className="size-5" />}
                   label="Porte"
@@ -302,7 +302,7 @@ function AdoptionButton({ pet, org }: { pet: Pet; org: PetOrganization | null })
 
 function DetailMetric({ icon, label, value }: { icon: ReactNode; label: string; value: string }) {
   return (
-    <div className="flex items-center gap-3 rounded-[8px] bg-[#0d3b66]/5 p-4">
+    <div className="flex items-center gap-3 rounded-xl bg-[#0d3b66]/5 p-4">
       <span className="text-[#f15156]">{icon}</span>
       <div>
         <p className="font-black text-[#0d3b66]/45 text-xs uppercase">{label}</p>
@@ -338,15 +338,15 @@ function getWrappedPictureIndex(nextIndex: number, pictureCount: number) {
 function PetDetailsSkeleton() {
   return (
     <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px]">
-      <div className="overflow-hidden rounded-[8px] bg-white p-6">
+      <div className="overflow-hidden rounded-xl bg-white p-6">
         <Skeleton className="-mx-6 -mt-6 aspect-[16/10] rounded-none bg-[#0d3b66]/10" />
-        <Skeleton className="mt-6 h-12 w-2/3 rounded-[8px] bg-[#0d3b66]/10" />
-        <Skeleton className="mt-5 h-5 w-full rounded-[8px] bg-[#0d3b66]/10" />
-        <Skeleton className="mt-3 h-5 w-5/6 rounded-[8px] bg-[#0d3b66]/10" />
+        <Skeleton className="mt-6 h-12 w-2/3 rounded-xl bg-[#0d3b66]/10" />
+        <Skeleton className="mt-5 h-5 w-full rounded-xl bg-[#0d3b66]/10" />
+        <Skeleton className="mt-3 h-5 w-5/6 rounded-xl bg-[#0d3b66]/10" />
       </div>
       <div className="space-y-4">
-        <Skeleton className="h-56 rounded-[8px] bg-[#0d3b66]/10" />
-        <Skeleton className="h-72 rounded-[8px] bg-[#0d3b66]/10" />
+        <Skeleton className="h-56 rounded-xl bg-[#0d3b66]/10" />
+        <Skeleton className="h-72 rounded-xl bg-[#0d3b66]/10" />
       </div>
     </div>
   );

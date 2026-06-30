@@ -109,7 +109,7 @@ export function PetForm({
           value={form.about}
           onChange={(event) => updateField("about", event.target.value)}
           placeholder="Conte um pouco sobre a personalidade do pet"
-          className="min-h-32 rounded-[8px] border border-[#0d3b66]/15 bg-[#fff7ed] px-4 py-3 font-bold text-[#0d3b66] text-sm leading-6 outline-none transition placeholder:text-[#0d3b66]/35 focus-visible:ring-2 focus-visible:ring-[#0d3b66]/25"
+          className="min-h-32 rounded-xl border border-[#0d3b66]/15 bg-[#fff7ed] px-4 py-3 font-bold text-[#0d3b66] text-sm leading-6 outline-none transition placeholder:text-[#0d3b66]/35 focus-visible:ring-2 focus-visible:ring-[#0d3b66]/25"
         />
       </label>
 
@@ -219,7 +219,7 @@ function TextField({
         value={value}
         onChange={(event) => onChange(event.target.value)}
         placeholder={placeholder}
-        className="h-12 rounded-[8px] border-[#0d3b66]/15 bg-[#fff7ed] px-4 font-bold text-[#0d3b66] text-sm placeholder:text-[#0d3b66]/35"
+        className="h-12 rounded-xl border-[#0d3b66]/15 bg-[#fff7ed] px-4 font-bold text-[#0d3b66] text-sm placeholder:text-[#0d3b66]/35"
       />
       {error ? <span className="font-bold text-red-500 text-sm">{error}</span> : null}
     </label>
@@ -243,7 +243,7 @@ function SelectField({
       <select
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        className="h-12 rounded-[8px] border border-[#0d3b66]/15 bg-[#fff7ed] px-3 font-bold text-[#0d3b66] text-sm outline-none transition focus-visible:ring-2 focus-visible:ring-[#0d3b66]/25"
+        className="h-12 rounded-xl border border-[#0d3b66]/15 bg-[#fff7ed] px-3 font-bold text-[#0d3b66] text-sm outline-none transition focus-visible:ring-2 focus-visible:ring-[#0d3b66]/25"
       >
         {options.map((option) => (
           <option key={option.value} value={option.value}>
@@ -293,7 +293,7 @@ function StringListField({
           <Input
             value={value}
             onChange={(event) => updateValue(index, event.target.value)}
-            className="h-12 rounded-[8px] border-[#0d3b66]/15 bg-[#fff7ed] px-4 font-bold text-[#0d3b66] text-sm"
+            className="h-12 rounded-xl border-[#0d3b66]/15 bg-[#fff7ed] px-4 font-bold text-[#0d3b66] text-sm"
           />
           <Button
             type="button"

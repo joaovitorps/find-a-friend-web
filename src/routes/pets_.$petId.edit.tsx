@@ -101,7 +101,7 @@ function EditPetPage() {
       <main className="mx-auto w-full max-w-5xl px-5 py-8 sm:px-8 lg:py-12">
         <BackButton fallback="/pets/mine" />
 
-        <section className="mt-8 rounded-[8px] bg-white p-5 shadow-sm sm:p-8">
+        <section className="mt-8 rounded-xl bg-white p-5 shadow-sm sm:p-8">
           <div className="max-w-2xl">
             <p className="font-black text-[#f15156] text-sm uppercase tracking-wide">
               Área da organização
@@ -115,7 +115,7 @@ function EditPetPage() {
           </div>
 
           {!orgId ? (
-            <div className="mt-8 rounded-[8px] border border-[#f15156]/20 bg-[#fff7ed] p-6">
+            <div className="mt-8 rounded-xl border border-[#f15156]/20 bg-[#fff7ed] p-6">
               <h2 className="font-black text-2xl text-[#0d3b66]">Faça login para editar pets</h2>
               <p className="mt-2 font-semibold text-[#0d3b66]/65 text-sm leading-6">
                 A edição precisa de uma organização autenticada.
@@ -133,7 +133,7 @@ function EditPetPage() {
           {orgId && loadingPet ? <EditPetSkeleton /> : null}
 
           {orgId && !loadingPet && error ? (
-            <div className="mt-8 rounded-[8px] border border-[#f15156]/20 bg-[#fff7ed] p-6">
+            <div className="mt-8 rounded-xl border border-[#f15156]/20 bg-[#fff7ed] p-6">
               <h2 className="font-black text-2xl text-[#0d3b66]">
                 Não foi possível carregar o pet
               </h2>
@@ -142,7 +142,7 @@ function EditPetPage() {
           ) : null}
 
           {orgId && !loadingPet && pet && !canEdit ? (
-            <div className="mt-8 rounded-[8px] border border-[#f15156]/20 bg-[#fff7ed] p-6">
+            <div className="mt-8 rounded-xl border border-[#f15156]/20 bg-[#fff7ed] p-6">
               <h2 className="font-black text-2xl text-[#0d3b66]">
                 Esse pet pertence a outra organização
               </h2>
@@ -173,15 +173,15 @@ function EditPetSkeleton() {
   return (
     <div className="mt-8 grid gap-6">
       <div className="grid gap-5 md:grid-cols-2">
-        <Skeleton className="h-12 rounded-[8px] bg-[#0d3b66]/10" />
-        <Skeleton className="h-12 rounded-[8px] bg-[#0d3b66]/10" />
+        <Skeleton className="h-12 rounded-xl bg-[#0d3b66]/10" />
+        <Skeleton className="h-12 rounded-xl bg-[#0d3b66]/10" />
       </div>
-      <Skeleton className="h-32 rounded-[8px] bg-[#0d3b66]/10" />
+      <Skeleton className="h-32 rounded-xl bg-[#0d3b66]/10" />
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-        <Skeleton className="h-12 rounded-[8px] bg-[#0d3b66]/10" />
-        <Skeleton className="h-12 rounded-[8px] bg-[#0d3b66]/10" />
-        <Skeleton className="h-12 rounded-[8px] bg-[#0d3b66]/10" />
-        <Skeleton className="h-12 rounded-[8px] bg-[#0d3b66]/10" />
+        <Skeleton className="h-12 rounded-xl bg-[#0d3b66]/10" />
+        <Skeleton className="h-12 rounded-xl bg-[#0d3b66]/10" />
+        <Skeleton className="h-12 rounded-xl bg-[#0d3b66]/10" />
+        <Skeleton className="h-12 rounded-xl bg-[#0d3b66]/10" />
       </div>
     </div>
   );

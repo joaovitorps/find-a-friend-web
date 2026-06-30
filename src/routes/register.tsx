@@ -155,7 +155,7 @@ function RegisterPage() {
 
         <form
           onSubmit={handleSubmit}
-          className="rounded-[8px] border border-[#0d3b66]/10 bg-white p-4 shadow-sm sm:p-6 lg:p-8"
+          className="rounded-xl border border-[#0d3b66]/10 bg-white p-4 shadow-sm sm:p-6 lg:p-8"
           noValidate
         >
           <div className="flex flex-col gap-8">
