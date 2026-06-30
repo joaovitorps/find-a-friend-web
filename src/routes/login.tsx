@@ -1,7 +1,6 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { Eye, EyeOff, HeartHandshake, LogIn } from "lucide-react";
 import {
-  type FormEvent,
   type HTMLInputTypeAttribute,
   type ReactNode,
   useEffect,
@@ -49,7 +48,7 @@ function LoginPage() {
     setForm((current) => ({ ...current, [field]: value }));
   }
 
-  function handleSubmit(event: FormEvent) {
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const nextErrors = validateLoginForm(form);
@@ -102,7 +101,7 @@ function LoginPage() {
             </p>
           </div>
 
-          <div className="rounded-[8px] bg-[#f15156] p-5 text-white">
+          <div className="rounded-xl bg-[#f15156] p-5 text-white">
             <HeartHandshake className="size-8 text-[#f4d35e]" />
             <p className="mt-5 font-black text-3xl leading-none">Login da ONG</p>
             <p className="mt-2 font-bold text-sm text-white/85 leading-6">
@@ -113,7 +112,7 @@ function LoginPage() {
 
         <form
           onSubmit={handleSubmit}
-          className="max-w-2xl rounded-[8px] border border-[#0d3b66]/10 bg-white p-4 shadow-sm sm:p-6 lg:p-8"
+          className="max-w-2xl rounded-xl border border-[#0d3b66]/10 bg-white p-4 shadow-sm sm:p-6 lg:p-8"
           noValidate
         >
           <FormSection icon={<LogIn className="size-5" />} title="Acesso">
@@ -140,7 +139,7 @@ function LoginPage() {
           </FormSection>
 
           {serverError ? (
-            <p className="mt-6 rounded-[8px] bg-red-50 px-4 py-3 font-bold text-red-600 text-sm">
+            <p className="mt-6 rounded-xl bg-red-50 px-4 py-3 font-bold text-red-600 text-sm">
               {serverError}
             </p>
           ) : null}
@@ -216,7 +215,7 @@ function TextField({
         aria-describedby={error ? `${id}-error` : undefined}
         onChange={(event) => onChange(event.target.value)}
         placeholder={placeholder}
-        className="h-12 rounded-[8px] border-[#0d3b66]/15 bg-[#fff7ed] px-4 font-bold text-[#0d3b66] text-sm placeholder:text-[#0d3b66]/35 focus-visible:ring-2 focus-visible:ring-[#0d3b66]/25 aria-invalid:border-red-500 aria-invalid:ring-2 aria-invalid:ring-red-500/20"
+        className="h-12 rounded-xl border-[#0d3b66]/15 bg-[#fff7ed] px-4 font-bold text-[#0d3b66] text-sm placeholder:text-[#0d3b66]/35 focus-visible:ring-2 focus-visible:ring-[#0d3b66]/25 aria-invalid:border-red-500 aria-invalid:ring-2 aria-invalid:ring-red-500/20"
       />
       {error ? (
         <span id={`${id}-error`} className="font-bold text-red-500 text-sm">

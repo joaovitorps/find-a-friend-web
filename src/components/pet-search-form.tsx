@@ -1,5 +1,5 @@
 import { Search, X } from "lucide-react";
-import { type FormEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -37,7 +37,7 @@ export function PetSearchForm({ values, loading = false, onSearch, onClear }: Pe
     setDraft(values);
   }, [values]);
 
-  function handleSubmit(event: FormEvent) {
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     onSearch({
       ...draft,

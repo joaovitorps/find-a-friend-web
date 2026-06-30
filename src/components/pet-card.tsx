@@ -34,7 +34,7 @@ export function PetCard({
       initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
       animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
       transition={{ duration: 0.22, ease: "easeOut" }}
-      className="flex h-full flex-col overflow-hidden rounded-[8px] border border-[#0d3b66]/10 bg-white shadow-sm"
+      className="flex h-full flex-col overflow-hidden rounded-xl border border-[#0d3b66]/10 bg-white shadow-sm"
     >
       <Link
         to="/pets/$petId"
@@ -45,10 +45,10 @@ export function PetCard({
           <img
             src={imageUrl}
             alt={`Foto de ${pet.name}`}
-            className="aspect-[4/3] w-full object-cover"
+            className="aspect-4/3 w-full object-cover"
           />
         ) : (
-          <div className="flex aspect-[4/3] w-full items-center justify-center bg-[#f15156]/10 text-[#f15156]">
+          <div className="flex aspect-4/3 w-full items-center justify-center bg-[#f15156]/10 text-[#f15156]">
             <Home className="size-12" />
           </div>
         )}
@@ -171,7 +171,7 @@ function DeletePetDialog({
       <AlertDialog.Portal>
         <AlertDialog.Backdrop className="fixed inset-0 z-50 bg-[#0d3b66]/40" />
         <AlertDialog.Viewport className="fixed inset-0 z-50 flex items-center justify-center p-5">
-          <AlertDialog.Popup className="w-full max-w-md rounded-[8px] bg-white p-6 text-[#0d3b66] shadow-xl outline-none">
+          <AlertDialog.Popup className="w-full max-w-md rounded-xl bg-white p-6 text-[#0d3b66] shadow-xl outline-none">
             <AlertDialog.Title className="font-black text-2xl">
               Excluir {petName}?
             </AlertDialog.Title>
@@ -211,7 +211,7 @@ function DeletePetDialog({
 
 function PetMetric({ icon, label, value }: { icon: ReactNode; label: string; value: string }) {
   return (
-    <div className="rounded-[8px] bg-[#0d3b66]/5 p-3">
+    <div className="rounded-xl bg-[#0d3b66]/5 p-3">
       <dt className="flex items-center gap-1.5 font-black text-[#0d3b66]/45 text-[11px] uppercase">
         {icon}
         {label}

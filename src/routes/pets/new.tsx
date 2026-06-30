@@ -63,7 +63,7 @@ function NewPetPage() {
       <main className="mx-auto w-full max-w-5xl px-5 py-8 sm:px-8 lg:py-12">
         <BackButton />
 
-        <section className="mt-8 rounded-[8px] bg-white p-5 shadow-sm sm:p-8">
+        <section className="mt-8 rounded-xl bg-white p-5 shadow-sm sm:p-8">
           <div className="max-w-2xl">
             <p className="font-black text-[#f15156] text-sm uppercase tracking-wide">
               Área da organização
@@ -77,7 +77,7 @@ function NewPetPage() {
           </div>
 
           {!orgId ? (
-            <div className="mt-8 rounded-[8px] border border-[#f15156]/20 bg-[#fff7ed] p-6">
+            <div className="mt-8 rounded-xl border border-[#f15156]/20 bg-[#fff7ed] p-6">
               <h2 className="font-black text-2xl text-[#0d3b66]">Faça login para cadastrar pets</h2>
               <p className="mt-2 font-semibold text-[#0d3b66]/65 text-sm leading-6">
                 A criação precisa de uma organização autenticada.

@@ -1,5 +1,5 @@
 import { Plus, Save, Trash2 } from "lucide-react";
-import { type FormEvent, useState } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -71,7 +71,7 @@ export function PetForm({
     setForm((current) => ({ ...current, [field]: value }));
   }
 
-  function handleSubmit(event: FormEvent) {
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const nextErrors = validatePetForm(form);

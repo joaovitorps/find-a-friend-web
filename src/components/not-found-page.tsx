@@ -49,15 +49,15 @@ export function NotFoundPage() {
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-[8px] bg-white p-6 shadow-sm">
+          <div className="relative overflow-hidden rounded-xl bg-white p-6 shadow-sm">
             <div className="absolute -top-10 -right-10 size-32 rounded-full bg-[#f4d35e]/45" />
             <div className="absolute -bottom-12 -left-10 size-36 rounded-full bg-[#f15156]/15" />
             <div className="relative">
-              <div className="flex aspect-square items-center justify-center rounded-[8px] bg-[#fff7ed] text-[#f15156]">
+              <div className="flex aspect-square items-center justify-center rounded-xl bg-[#fff7ed] text-[#f15156]">
                 <PawIcon className="w-2/3 max-w-48" />
               </div>
               <div className="mt-5 grid gap-3">
-                <div className="flex items-center gap-3 rounded-[8px] bg-[#0d3b66]/5 p-4">
+                <div className="flex items-center gap-3 rounded-xl bg-[#0d3b66]/5 p-4">
                   <MapPin className="size-5 text-[#f15156]" />
                   <div>
                     <p className="font-black text-[#0d3b66] text-sm">Última pista</p>
@@ -66,7 +66,7 @@ export function NotFoundPage() {
                     </p>
                   </div>
                 </div>
-                <div className="rounded-[8px] bg-[#0d3b66] p-4 text-white">
+                <div className="rounded-xl bg-[#0d3b66] p-4 text-white">
                   <p className="font-black text-sm">Boa notícia</p>
                   <p className="mt-1 font-semibold text-white/75 text-xs leading-5">
                     A busca principal ainda sabe onde procurar.
