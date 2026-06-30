@@ -1,3 +1,0 @@
-{
-  "extends": "@find-a-friend-web/config/tsconfig.base.json"
-}

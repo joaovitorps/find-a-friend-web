@@ -9,7 +9,7 @@ build
 *.tsbuildinfo
 
 # Generated files
-apps/web/src/routeTree.gen.ts
+src/routeTree.gen.ts
 
 # Environment variables
 .env
@@ -35,13 +35,6 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
-
-# Turbo
-.turbo
-.nx
-
-# Better-T-Stack
-.alchemy
 
 # Testing
 coverage
