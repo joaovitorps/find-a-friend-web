@@ -57,15 +57,15 @@ export function AppShell({ children }: AppShellProps) {
           </Link>
 
           {/* 404 showcase */}
-          <Link
-            to="/dummy-404-example"
+          <a
+            href="/dummy-404-example"
             className="group relative inline-flex items-center justify-center rounded-full border border-[#0d3b66]/20 border-dashed px-3 py-1.5 font-bold text-[#0d3b66]/25 text-sm transition hover:justify-start hover:border-[#f15156]/40 hover:text-[#f15156]"
           >
             <TriangleAlert className="size-4 shrink-0" />
             <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 transition-all duration-300 ease-out group-hover:ml-2 group-hover:max-w-96 group-hover:opacity-100">
               Veja nossa página de erro 404
             </span>
-          </Link>
+          </a>
 
           <nav className="flex items-center gap-2">
             <HeaderNavLink
