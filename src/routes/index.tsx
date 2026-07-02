@@ -180,6 +180,13 @@ function HomeComponent() {
           onClear={() => navigate({ search: {} })}
         />
 
+        <div className="rounded-xl border border-[#f4d35e]/30 bg-[#fef9e7] px-4 py-3 text-center">
+          <p className="font-bold text-[#0d3b66]/70 text-xs leading-5">
+            Os pets exibidos são apenas exemplos ilustrativos e não estão disponíveis para adoção
+            real. Esta é uma aplicação de demonstração.
+          </p>
+        </div>
+
         {!hasCity ? <InitialPetsState /> : null}
         {hasCity && loading ? <PetsLoadingGrid /> : null}
         {hasCity && !loading && error ? (
