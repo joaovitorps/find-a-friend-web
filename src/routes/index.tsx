@@ -13,6 +13,7 @@ import {
 } from "@/components/pet-list-states";
 import { PetSearchForm, type PetSearchValues } from "@/components/pet-search-form";
 import { getStoredOrgId } from "@/lib/auth";
+import { fetchOrganizationCities, type OrganizationCity } from "@/lib/organizations";
 import {
   AGE_OPTIONS,
   deletePet,
@@ -43,6 +44,7 @@ function HomeComponent() {
   const [pets, setPets] = useState<Pet[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [cityOptions, setCityOptions] = useState<OrganizationCity[]>([]);
   const [publishingPetId, setPublishingPetId] = useState<string | null>(null);
   const [deletingPetId, setDeletingPetId] = useState<string | null>(null);
 
@@ -97,6 +99,30 @@ function HomeComponent() {
   useEffect(() => {
     void loadPets();
   }, [loadPets]);
+
+  useEffect(() => {
+    let ignore = false;
+
+    async function loadOrganizationCities() {
+      try {
+        const response = await fetchOrganizationCities();
+
+        if (!ignore && response.ok) {
+          setCityOptions(response.data.cities);
+        }
+      } catch {
+        if (!ignore) {
+          setCityOptions([]);
+        }
+      }
+    }
+
+    void loadOrganizationCities();
+
+    return () => {
+      ignore = true;
+    };
+  }, []);
 
   async function handlePublish(petId: string) {
     setPublishingPetId(petId);
@@ -165,6 +191,7 @@ function HomeComponent() {
 
         <PetSearchForm
           values={filters}
+          cityOptions={cityOptions}
           loading={loading}
           onSearch={(values) =>
             navigate({
